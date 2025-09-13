@@ -12,11 +12,6 @@ import (
 	"strconv"
 )
 
-const PowerfulOwlTaxonID = 20115
-const PinkRobinTaxonID = 14172
-const VictoriaPlaceID = 7830
-const ObservationsURL = "https://api.inaturalist.org/v2/observations?verifiable=true&order_by=created_at&order=desc&page=1&spam=false&taxon_id=%d&place_id=%d&locale=en-US&per_page=50&fields=(created_at:!t,created_at_details:all,created_time_zone:!t,geoprivacy:!t,id:!t,location:!t,mappable:!t,obscured:!t,observed_on:!t,observed_on_details:all,observed_time_zone:!t,place_guess:!t,private_geojson:!t,quality_grade:!t)"
-
 type Tracker struct {
 	SeenUUID map[string]struct{}
 	TaxonIDs []int
